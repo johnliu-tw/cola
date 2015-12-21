@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Db2</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+</head>
+<body >
+<img src="http://b2b.travelrich.com/Paragraph_img/Paragraph_Pic2017344.jpg" alt="" class="img-circle">
+</div>
+<h2 style="font-size:50px;font-family:fantasy;font-color:red">可樂旅遊顧客忠誠度分析系統</h2>
+</div>
+
+
+<div style="font-size:25px;font-family:fantasy">請選擇你想知道的種類:</div>
+
+<ul>
+<li>  	
+<div style="font-weight:bold;font-size:35px;list-style-type:square"><%= link_to '性別',gender_path %> </div>
+</li>
+</ul>
+<ul>
+<li> 
+<div style="font-weight:bold;font-size:35px;"><%= link_to "年齡", age_path %></div>
+</li>
+</ul>
+<ul>
+<li> 
+<div style="font-weight:bold;font-size:35px;"><%= link_to "旅遊類型", type_path %></div>
+</li>
+</ul>
+<br>
+</div>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/data.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+$(function () {
+$('#container').highcharts({
+data: {
+table: 'datatable'
+},
+chart: {
+type: 'column'
+},
+title: {
+text: '忠誠顧客年齡分布'
+},
+yAxis: {
+allowDecimals: false,
+title: {
+text: 'Count'
+}
+},
+tooltip: {
+formatter: function () {
+return '<b>' + this.series.name + '</b><br/>' +
+this.point.y + ' ' + this.point.name.toLowerCase();
+}
+}
+});
+});
+</script>
+<%= render 'table' %>
+
+<%= link_to "back", root_path %>
+
+<div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+$(function () {
+$('#container1').highcharts({
+data: {
+table: 'datatable1'
+},
+chart: {
+type: 'column'
+},
+title: {
+text: '一般顧客年齡分布'
+},
+yAxis: {
+allowDecimals: false,
+title: {
+text: 'Count'
+}
+},
+tooltip: {
+formatter: function () {
+return '<b>' + this.series.name + '</b><br/>' +
+this.point.y + ' ' + this.point.name.toLowerCase();
+}
+}
+});
+});
+</script>
+<%= render 'table2' %>
+
+<%= link_to "back", root_path %>
+<div id="footer"> 版權所有 © 可樂旅遊</div>
